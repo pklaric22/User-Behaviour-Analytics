@@ -10,3 +10,4 @@ Jure | jjelcic22@student.foi.hr |  | jjelcic22
 Maks | mkos22@student.foi.hr |  | mkos22
 Marta Kovač | mkovac21@student.foi.hr | 0016154537 | mkovac21
 
+## How to run the project
