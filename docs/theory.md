@@ -24,3 +24,6 @@ Kombinacijom ovih faktora UBA sustavi dodjeljuju bodove rizika određenim odstup
 <img width="1408" height="768" alt="Gemini_Generated_Image_quxxr5quxxr5quxx" src="https://github.com/user-attachments/assets/c13184f7-0373-4861-9019-fa89be7dd794" />
 Slika 1. Model UBA sustava (Izvor: kreirano UI alatom gemini.google.com)
 
+## Anomalije i strojno učenje
+
+## Virtualno okruženje
