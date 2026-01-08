@@ -21,6 +21,8 @@ Dok je korisnička aktivnost sirovi podatak, uzorci ponašanja (eng. _behavior p
 
 Kombinacijom ovih faktora UBA sustavi dodjeljuju bodove rizika određenim odstupanjima od uobičajenih uzoraka, pri čemu veća devijacija od bazne linije znači i viši rizik. Na taj način se iz mase svakodnevnih aktivnosti izdvajaju potencijalno opasni scenariji, poput kompromitiranih vjerodajnica, zlonamjernih insajdera ili naprednih trajnih prijetnji, čime se sigurnosnim timovima omogućuje fokus na najkritičnije incidente.
 
+<br>
+
 <p align="center">
   <img width="1408" height="768" alt="Gemini_Generated_Image_quxxr5quxxr5quxx" src="https://github.com/user-attachments/assets/c13184f7-0373-4861-9019-fa89be7dd794" />
   <br>
@@ -32,4 +34,5 @@ Kombinacijom ovih faktora UBA sustavi dodjeljuju bodove rizika određenim odstup
 ## Anomalije i strojno učenje
 
 ## Virtualno okruženje
+
 
