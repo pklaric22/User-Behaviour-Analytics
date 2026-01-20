@@ -33,6 +33,18 @@ Kombinacijom ovih faktora UBA sustavi dodjeljuju bodove rizika određenim odstup
 
 ## Anomalije i strojno učenje
 
+Anomalije u kontekstu User Behaviour Analytics sustava predstavljaju odstupanja od uobičajenih obrazaca ponašanja korisnika. Takva odstupanja ne moraju nužno uvijek označavati zlonamjernu aktivnost, ali mogu ukazivati na povećani sigurnosni rizik, osobito ako se ponavljaju ili kombiniraju s drugim neuobičajenim događajima. Primjeri anomalija uključuju prijave iz neuobičajenih geografskih lokacija, nagli porast broja zahtjeva u kratkom vremenskom razdoblju ili pristup resursima koji nisu dio uobičajenog radnog procesa korisnika.
+
+U suvremenim UBA sustavima često se primjenjuju tehnike strojnog učenja kako bi se automatizirala detekcija anomalija. Modeli strojnog učenja mogu se trenirati na povijesnim podacima kako bi naučili normalne obrasce ponašanja te prepoznali odstupanja bez potrebe za ručno definiranim pravilima. Najčešće se koriste nenadzirane metode učenja, budući da unaprijed označeni podaci o napadima često nisu dostupni.
+
+U okviru ovog projekta strojno učenje nije implementirano, već je primijenjen jednostavniji pristup temeljen na pragovima i ponašajnim pravilima. Takav pristup omogućuje jasnu interpretaciju rezultata i lakše razumijevanje procesa detekcije anomalija, što je posebno prikladno u edukativnom kontekstu.
+
+
 ## Virtualno okruženje
 
+Za potrebe implementacije i testiranja User Behaviour Analytics sustava korišteno je virtualno okruženje temeljeno na dvije odvojene virtualne mašine. Takva arhitektura omogućuje jasnu razdvojenost između poslužiteljskog dijela sustava i klijentskih aktivnosti, čime se vjernije simulira stvarno mrežno okruženje.
+
+Prva virtualna mašina korištena je kao serversko okruženje te je na njoj pokrenuta ciljana aplikacija zajedno s pripadajućim sustavima za prikupljanje metrika i nadzor sigurnosnih događaja. U tom okruženju generiraju se zapisi i metrike koji opisuju ponašanje korisnika, kao i sigurnosni događaji relevantni za analizu.
+
+Druga virtualna mašina korištena je za simulaciju klijentskih aktivnosti. Na njoj su izvođene kontrolirane simulacije korisničkog ponašanja, uključujući normalne aktivnosti i anomalne scenarije. Na taj način omogućeno je generiranje realističnog prometa prema serverskom sustavu, bez izravnog utjecaja na stabilnost i integritet poslužiteljskog okruženja.
 
