@@ -10,4 +10,38 @@ Jure | jjelcic22@student.foi.hr |  | jjelcic22
 Maks | mkos22@student.foi.hr |  | mkos22
 Marta Kovač | mkovac21@student.foi.hr | 0016154537 | mkovac21
 
-## How to run the project
+## Ciljevi projekta
+Glavni ciljevi projekta su:
+- simulirati realistično okruženje s korisničkim aktivnostima
+- prikupljati i analizirati podatke o ponašanju korisnika
+- identificirati anomalije i potencijalno zlonamjerne aktivnosti
+- vizualizirati sigurnosne metrike i događaje
+- evaluirati učinkovitost ponašajno orijentiranog pristupa detekciji napada
+
+---
+
+## Korištene tehnologije i alati
+U sklopu projekta korišteni su sljedeći alati:
+- **Prometheus** – prikupljanje i nadzor metrika
+- **Grafana** – vizualizacija podataka i izrada nadzornih ploča
+- **Locust** – simulacija korisničkog ponašanja i napadačkog prometa
+- **Flask** – backend aplikacija koja simulira ciljani sustav
+
+---
+
+## Opseg projekta
+Projekt je usmjeren na **detekciju anomalija temeljenu na ponašanju korisnika**.
+
+Anomalije se identificiraju korištenjem pragova i obrazaca ponašanja dobivenih analizom prikupljenih metrika.  
+Primjena strojnog učenja razmatra se kao mogući budući nastavak projekta, ali nije implementirana u trenutnoj verziji.
+
+---
+
+## Struktura repozitorija
+Repozitorij je organiziran na sljedeći način:
+- `docs/` – teorijska podloga, plan implementacije i završno izvješće
+- `implementation/` – izvorni kod, konfiguracijske datoteke i upute za postavljanje
+- `results/` – rezultati, zapisi, snimke zaslona i analiza
+- `presentation/` – prezentacijski materijali projekta
+
+
