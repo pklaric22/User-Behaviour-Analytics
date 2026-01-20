@@ -1,26 +1,26 @@
 # User Behaviour Analytics (UBA)
-User Behavior Analytics (UBA) u kibernetičkoj sigurnosti označava skup metoda i alata koji koriste analitiku podataka, umjetnu inteligenciju i strojno učenje za praćenje ponašanja korisnika u mreži, modeliranje njihovih uobičajenih obrazaca te detekciju odstupanja koja mogu ukazivati na sigurnosne prijetnje. U praksi to znači da UBA sustav kontinuirano prikuplja podatke o prijavama, pristupu resursima (npr. pristup zaposlenika na portalima poduzeća), mrežnim tokovima i drugim aktivnostima, kako bi izgradio baznu liniju “normalnog” ponašanja za svakog korisnika.
+
+User Behaviour Analytics (UBA) u području kibernetičke sigurnosti označava skup metoda i alata koji koriste analitiku podataka, statističke tehnike te metode umjetne inteligencije i strojnog učenja za praćenje i analizu ponašanja korisnika unutar informacijskog sustava. Cilj UBA pristupa je modelirati uobičajene obrasce ponašanja korisnika i na temelju njih prepoznati odstupanja koja mogu ukazivati na sigurnosne prijetnje, poput kompromitiranih korisničkih računa ili zloupotrebe ovlasti [1].
+
+U praksi, UBA sustav kontinuirano prikuplja podatke o prijavama korisnika, pristupu resursima, mrežnim tokovima i drugim interakcijama unutar sustava. Na temelju tih podataka izgrađuje se bazna linija normalnog ponašanja za svakog korisnika ili korisničku ulogu, što omogućuje prepoznavanje neuobičajenih aktivnosti u stvarnom vremenu [2].
+
+---
 
 ## Korisnička aktivnost
-Korisnička aktivnost predstavlja osnovnu jedinicu podataka koju UBA sustavi prikupljaju i analiziraju, pri čemu svaki događaj predstavlja konkretnu radnju korisnika u digitalnom okruženju. To su svi digitalni tragovi koje korisnik ostavlja tijekom interakcije s mrežnim resursima, aplikacijama i podacima unutar sustava, poput prijava, pristupa datotekama, promjene postavki ili mrežnih zahtjeva prema određenim servisima.
 
-Umjesto pukog bilježenja tehničkih događaja, UBA sustavi nastoje svaki događaj staviti u kontekst – tko je radnju izvršio, kada, s kojeg uređaja ili lokacije, pod kojim ovlastima i u kojem poslovnom procesu. Na taj način aktivnosti prestaju biti izolirani log zapisi i postaju dio ponašanja konkretne osobe ili automatiziranog procesa, što je ključno za prepoznavanje odstupanja i potencijalno zlonamjernog ponašanja.
+Korisnička aktivnost predstavlja temeljnu jedinicu podataka koju UBA sustavi prikupljaju i analiziraju. Svaka aktivnost odgovara konkretnoj radnji korisnika u digitalnom okruženju te obuhvaća sve digitalne tragove nastale tijekom interakcije s mrežnim resursima, aplikacijama i podacima unutar sustava. Takve aktivnosti uključuju autentifikacijske događaje, pristup datotekama, promjene konfiguracija, kao i mrežne zahtjeve prema različitim servisima [3].
 
-Glavni izvori podataka o korisničkoj aktivnosti u sigurnosnom kontekstu uključuju:
-- autentifikacijske zapise (prijave, odjave, neuspjele pokušaje, MFA),
-- trajanje sesije,
-- operacije nad datotekama (čitanje, pisanje, brisanje, preuzimanje),
-- mrežnu aktivnost (protokoli, odredišne IP adrese, količina podataka) te
-- korištenje aplikacija i administrativnih alata (stranice koje se pregledavaju, mjesta koja se najčešće klikaju).
+Za razliku od klasičnog pristupa koji se svodi na puko bilježenje tehničkih logova, UBA sustavi nastoje svaku aktivnost staviti u širi kontekst. To uključuje identitet korisnika, vrijeme izvršavanja radnje, korišteni uređaj ili lokaciju, dodijeljene ovlasti te poslovni kontekst u kojem se aktivnost odvija. Time pojedinačni događaji prestaju biti izolirani zapisi i postaju dio cjelovitog obrasca ponašanja određenog korisnika ili procesa, što je ključno za učinkovitu detekciju anomalija i potencijalno zlonamjernog ponašanja [4].
 
-## Uzorci ponašanja (eng. _behaviour patterns_) korisnika
-Dok je korisnička aktivnost sirovi podatak, uzorci ponašanja (eng. _behavior patterns_) predstavljaju modelirane obrasce koji nastaju kada se te aktivnosti analiziraju kroz vrijeme. UBA sustav na temelju povijesnih logova gradi "normalno" ponašanje za svakog korisnika ili ulogu (npr. administrator, računovođa, developer), definirajući što je uobičajeno u pogledu vremena, lokacije, resursa i intenziteta aktivnosti. Ovi uzorci obično se promatraju kroz nekoliko ključnih dimenzija:
-- **Vremenski obrasci (kada):** tipično radno vrijeme, sezonalnost aktivnosti, uobičajeni ritam prijava i pristupa resursima.
-- **Operativni obrasci (što i kako)**: koje aplikacije i servise korisnik koristi, koje tipove datoteka obrađuje, kakve su mu uobičajene operacije nad podacima.
-- **Geografski/infrastrukturni obrasci (odakle):** uobičajene IP adrese, uređaji, VPN-ovi i mrežni segmenti s kojih se korisnik spaja, uključujući prepoznavanje “nemogućeg putovanja”.
+---
 
-Kombinacijom ovih faktora UBA sustavi dodjeljuju bodove rizika određenim odstupanjima od uobičajenih uzoraka, pri čemu veća devijacija od bazne linije znači i viši rizik. Na taj način se iz mase svakodnevnih aktivnosti izdvajaju potencijalno opasni scenariji, poput kompromitiranih vjerodajnica, zlonamjernih insajdera ili naprednih trajnih prijetnji, čime se sigurnosnim timovima omogućuje fokus na najkritičnije incidente.
+## Uzorci ponašanja korisnika
 
+Dok korisnička aktivnost predstavlja sirove podatke, uzorci ponašanja korisnika nastaju analizom tih aktivnosti kroz dulje vremensko razdoblje. UBA sustavi na temelju povijesnih zapisa oblikuju model normalnog ponašanja za pojedinog korisnika ili skupinu korisnika sličnih uloga, poput administratora, računovođa ili razvojnih inženjera. Takvi modeli definiraju što se smatra uobičajenim u pogledu vremena, lokacije, resursa i intenziteta aktivnosti [1].
+
+Uzorci ponašanja obično uključuju vremenske aspekte, poput tipičnog radnog vremena i učestalosti prijava, operativne aspekte koji opisuju koje aplikacije i resurse korisnik koristi te infrastrukturne ili geografske aspekte, kao što su uobičajene IP adrese, uređaji i mrežni segmenti s kojih se korisnik povezuje. Kombinacijom tih dimenzija UBA sustavi mogu prepoznati situacije koje značajno odstupaju od očekivanog ponašanja, poput prijava s neuobičajenih lokacija ili naglog povećanja aktivnosti [5].
+
+Na temelju odstupanja od bazne linije ponašanja, UBA sustavi često dodjeljuju bodove rizika pojedinim događajima ili korisnicima. Veća devijacija od uobičajenih obrazaca rezultira višom razinom rizika, čime se sigurnosnim timovima omogućuje da se fokusiraju na potencijalno najopasnije scenarije, uključujući kompromitirane vjerodajnice, insajderske prijetnje i napredne trajne napade.
 <br>
 
 <p align="center">
@@ -31,20 +31,23 @@ Kombinacijom ovih faktora UBA sustavi dodjeljuju bodove rizika određenim odstup
 
 <br>
 
+
 ## Anomalije i strojno učenje
 
-Anomalije u kontekstu User Behaviour Analytics sustava predstavljaju odstupanja od uobičajenih obrazaca ponašanja korisnika. Takva odstupanja ne moraju nužno uvijek označavati zlonamjernu aktivnost, ali mogu ukazivati na povećani sigurnosni rizik, osobito ako se ponavljaju ili kombiniraju s drugim neuobičajenim događajima. Primjeri anomalija uključuju prijave iz neuobičajenih geografskih lokacija, nagli porast broja zahtjeva u kratkom vremenskom razdoblju ili pristup resursima koji nisu dio uobičajenog radnog procesa korisnika.
+Anomalije u kontekstu User Behaviour Analytics sustava definiraju se kao ponašanja koja značajno odstupaju od uobičajenih obrazaca aktivnosti korisnika. Takva odstupanja ne moraju uvijek nužno predstavljati zlonamjernu aktivnost, ali često ukazuju na povećani sigurnosni rizik, osobito ako se pojavljuju učestalo ili u kombinaciji s drugim neuobičajenim događajima [2].
 
-U suvremenim UBA sustavima često se primjenjuju tehnike strojnog učenja kako bi se automatizirala detekcija anomalija. Modeli strojnog učenja mogu se trenirati na povijesnim podacima kako bi naučili normalne obrasce ponašanja te prepoznali odstupanja bez potrebe za ručno definiranim pravilima. Najčešće se koriste nenadzirane metode učenja, budući da unaprijed označeni podaci o napadima često nisu dostupni.
+U suvremenim UBA rješenjima sve se češće primjenjuju tehnike strojnog učenja kako bi se automatizirala detekcija anomalija. Modeli strojnog učenja treniraju se na povijesnim podacima kako bi naučili normalne obrasce ponašanja korisnika te prepoznali odstupanja bez potrebe za unaprijed definiranim pravilima. Posebno su zastupljene nenadzirane metode učenja, budući da označeni podaci o sigurnosnim incidentima često nisu dostupni [6].
 
-U okviru ovog projekta strojno učenje nije implementirano, već je primijenjen jednostavniji pristup temeljen na pragovima i ponašajnim pravilima. Takav pristup omogućuje jasnu interpretaciju rezultata i lakše razumijevanje procesa detekcije anomalija, što je posebno prikladno u edukativnom kontekstu.
+U okviru ovog projekta strojno učenje nije implementirano, već je primijenjen jednostavniji pristup temeljen na pragovima i ponašajnim pravilima. Takav pristup omogućuje jasnu interpretaciju rezultata i lakše razumijevanje procesa detekcije anomalija, što je osobito prikladno u edukativnom i demonstracijskom kontekstu.
 
+---
 
 ## Virtualno okruženje
 
-Za potrebe implementacije i testiranja User Behaviour Analytics sustava korišteno je virtualno okruženje temeljeno na dvije odvojene virtualne mašine. Takva arhitektura omogućuje jasnu razdvojenost između poslužiteljskog dijela sustava i klijentskih aktivnosti, čime se vjernije simulira stvarno mrežno okruženje.
+Za potrebe implementacije i evaluacije User Behaviour Analytics sustava korišteno je virtualno okruženje temeljeno na dvije odvojene virtualne mašine. Takav pristup omogućuje jasnu razdvojenost između poslužiteljskog dijela sustava i klijentskih aktivnosti, čime se vjernije simulira stvarno mrežno okruženje kakvo se može pronaći u organizacijama [7].
 
-Prva virtualna mašina korištena je kao serversko okruženje te je na njoj pokrenuta ciljana aplikacija zajedno s pripadajućim sustavima za prikupljanje metrika i nadzor sigurnosnih događaja. U tom okruženju generiraju se zapisi i metrike koji opisuju ponašanje korisnika, kao i sigurnosni događaji relevantni za analizu.
+Prva virtualna mašina korištena je kao serversko okruženje, na kojem je pokrenuta ciljana aplikacija zajedno sa sustavima za prikupljanje metrika i nadzor sigurnosnih događaja. U tom okruženju generiraju se zapisi i metrike koji opisuju ponašanje korisnika te omogućuju analizu sigurnosno relevantnih događaja.
 
-Druga virtualna mašina korištena je za simulaciju klijentskih aktivnosti. Na njoj su izvođene kontrolirane simulacije korisničkog ponašanja, uključujući normalne aktivnosti i anomalne scenarije. Na taj način omogućeno je generiranje realističnog prometa prema serverskom sustavu, bez izravnog utjecaja na stabilnost i integritet poslužiteljskog okruženja.
+Druga virtualna mašina korištena je za simulaciju klijentskih aktivnosti. Na njoj su izvođene kontrolirane simulacije normalnog i anomalnog korisničkog ponašanja, čime je generiran realističan promet prema serverskom sustavu bez ugrožavanja njegove stabilnosti. Korištenjem ovakvog virtualnog okruženja omogućena je ponovljivost testiranja i jasna evaluacija učinkovitosti UBA mehanizama u detekciji neuobičajenog ponašanja.
+
 
